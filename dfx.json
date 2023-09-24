@@ -7,12 +7,11 @@
     },
     "coin_gift_app_frontend": {
       "type": "assets",
-      "source": [
-        "src/coin_gift_app_frontend/assets"
-      ],
-      "dependencies": [
-        "coin_gift_app_backend"
-      ]
+      "frontend": {
+        "entrypoint": "src/coin_gift_app_frontend/src/index.html"
+      },
+      "source": ["src/coin_gift_app_frontend/"],
+      "dependencies": ["coin_gift_app_backend"]
     }
   },
   "defaults": {
