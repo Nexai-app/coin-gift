@@ -8,7 +8,7 @@ const theme = extendTheme({
         backgroundSize: "cover",
         backgroundRepeat: "no-repeat",
         backgroundPosition: "center",
-        color: "white",
+        color: "black",
       },
     },
   },

@@ -22,7 +22,7 @@
         "entrypoint": "src/coin_gift_app_frontend/src/index.html"
       },
       "source": [
-        "src/coin_gift_app_frontend/"
+        "dist/coin_gift_app_frontend/"
       ],
       "dependencies": [
         "coin_gift_app_backend",

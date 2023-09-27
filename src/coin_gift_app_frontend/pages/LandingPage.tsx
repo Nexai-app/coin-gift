@@ -33,7 +33,7 @@ function LandingPage() {
   return (
     <Box>
       <Flex>
-        <Text fontSize={'100px'} pb={'50px'}>Coin Gift App {userInput}</Text>
+        <Text color="white" fontSize={'100px'} pb={'50px'}>Coin Gift App {userInput}</Text>
       </Flex>
       <Center>
         <Button onClick={clickMe}>test integration</Button>
