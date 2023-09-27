@@ -1,13 +1,23 @@
 {
   "version": 1,
   "canisters": {
+    "nexai": {
+      "type": "custom",
+      "candid": "https://github.com/Nexai-app/nexi-v1/releases/download/latest/external.did",
+      "wasm": "https://github.com/Nexai-app/nexi-v1/releases/download/latest/external.wasm",
+      "remote": {
+        "id": {
+          "ic": "ouyx4-nyaaa-aaaag-qclkq-cai"
+        }
+      }
+    },
     "coin_gift_app_frontend": {
       "type": "assets",
       "frontend": {
         "entrypoint": "src/coin_gift_app_frontend/src/index.html"
       },
-      "source": ["src/coin_gift_app_frontend/"],
-      "dependencies": ["coin_gift_app_backend"]
+      "source": ["dist/coin_gift_app_frontend/"],
+      "dependencies": ["nexai"]
     }
   },
   "defaults": {

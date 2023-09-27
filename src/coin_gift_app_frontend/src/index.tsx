@@ -4,7 +4,11 @@ import "./index.css";
 import App from "./app";
 import { HashRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
+import { Assistant, userInput } from "nexai-assistant";
 import theme from "../theme";
+// import { nexai } from "../../declarations/nexai";
+
+console.log(userInput)
 
 import "@fontsource/public-sans/100.css";
 import "@fontsource/public-sans/200.css";
@@ -20,6 +24,7 @@ root.render(
     <HashRouter>
       <ChakraProvider theme={theme}>
         <App />
+        <Assistant color="red" companyName="Gift Coin" companyId={1} />
       </ChakraProvider>
     </HashRouter>
   </React.StrictMode>
