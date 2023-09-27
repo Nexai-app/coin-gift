@@ -6,7 +6,7 @@ import { HashRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
 import { Assistant, userInput } from "nexai-assistant";
 import theme from "../theme";
-// import { nexai } from "../../declarations/nexai";
+import { nexai } from "../../declarations/nexai";
 
 console.log(userInput)
 
@@ -24,7 +24,7 @@ root.render(
     <HashRouter>
       <ChakraProvider theme={theme}>
         <App />
-        <Assistant color="red" companyName="Gift Coin" companyId={1} />
+        {/* <Assistant color="red" companyName="Gift Coin" companyId={1} actor={nexai} embeddedQ={[782, 489, 4924, 42, 424, 424, 388]} /> */}
       </ChakraProvider>
     </HashRouter>
   </React.StrictMode>
