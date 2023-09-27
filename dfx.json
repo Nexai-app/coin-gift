@@ -1,10 +1,6 @@
 {
   "version": 1,
   "canisters": {
-    "coin_gift_app_backend": {
-      "type": "motoko",
-      "main": "src/coin_gift_app_backend/main.mo"
-    },
     "coin_gift_app_frontend": {
       "type": "assets",
       "frontend": {
