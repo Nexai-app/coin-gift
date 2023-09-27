@@ -19,10 +19,9 @@ export const useEmbeddQ = () => {
       const e = embedding.tolist()[0];
       if (e.length != 384) {
         console.log("Embedding size not correct");
-     
-
         return;
       }
+        console.log(embeddedQ)
       embeddedQ.push(e);
       // console.log("thier place", embeddedQ);
       return e;
