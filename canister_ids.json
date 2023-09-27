@@ -1,6 +1,5 @@
 {
-    "coin_gift_app_backend": {
-      "ic": "j74sj-eaaaa-aaaal-qcdwa-cai"
-    }
+  "coin_gift_app_frontend": {
+    "ic": "j74sj-eaaaa-aaaal-qcdwa-cai"
   }
-  
+}
