@@ -24,7 +24,8 @@
     "build": {
       "packtool": "",
       "args": ""
-    }
+    },
+    "version" : "0.13.1"
   },
   "output_env_file": ".env"
 }
