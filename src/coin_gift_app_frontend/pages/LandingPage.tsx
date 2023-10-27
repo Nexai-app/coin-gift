@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
 import { Box, Text, Image, Center, Flex, Button } from "@chakra-ui/react";
-import { coin_gift_app_backend } from "../../declarations/coin_gift_app_backend/index";
-// import { userInput } from "nexai-assistant";
+// import { coin_gift_app_backend } from "../../declarations/coin_gift_app_backend/sindex";
+import { userInput } from "nexai-assistant";
 // import { useInitTransformers, useEmbeddQ } from "../ml";
-// import { nexai } from "../../declarations/nexai";
+import { nexai } from "../../declarations/nexai";
 
 
 function LandingPage() {
