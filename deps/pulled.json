@@ -1,0 +1,31 @@
+{
+  "canisters": {
+    "ouyx4-nyaaa-aaaag-qclkq-cai": {
+      "name": "external",
+      "dependencies": [
+        "aol7b-vqaaa-aaaak-aepsq-cai"
+      ],
+      "wasm_hash": "4331dc03f6fcb72f5b2317e9c7bea790c5274d3dfa59a49c82770452b8a6f64f",
+      "init_guide": "null",
+      "candid_args": "()",
+      "gzip": false
+    },
+    "aol7b-vqaaa-aaaak-aepsq-cai": {
+      "name": "nexai",
+      "dependencies": [
+        "fnnlb-hqaaa-aaaao-a2igq-cai"
+      ],
+      "wasm_hash": "495e4dd5bdac537c0e16445af43b8a804d0b7f26082e513af4d688255c1ff04e",
+      "init_guide": "null",
+      "candid_args": "()",
+      "gzip": false
+    },
+    "fnnlb-hqaaa-aaaao-a2igq-cai": {
+      "name": "vdb",
+      "wasm_hash": "6bab10fc18a6e69ba557158bf64964e5d432aa31c8485aeeb54e504247956df1",
+      "init_guide": "null",
+      "candid_args": "()",
+      "gzip": false
+    }
+  }
+}

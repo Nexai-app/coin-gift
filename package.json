@@ -4,26 +4,32 @@
     "prestart": "npm run copy:types",
     "start": "webpack serve --mode development --env development",
     "prebuild": "npm run copy:types",
-    "copy:types": "rsync -avr .dfx/$(echo ${DFX_NETWORK:-'**'})/canisters/** --exclude='assets/' --exclude='idl/' --exclude='*.wasm' --exclude='*.most' --delete src/declarations"
+    "copy:types": "rsync -avr .dfx/$(echo ${DFX_NETWORK:-'**'})/canisters/** --exclude='assets/' --exclude='idl/' --exclude='*.wasm' --exclude='*.most'"
   },
   "dependencies": {
     "@chakra-ui/react": "^2.8.1",
-    "@dfinity/agent": "^0.19.2",
+    "@dfinity/agent": "^0.19.3",
+    "@dfinity/candid": "^0.19.3",
+    "@dfinity/identity-secp256k1": "^0.19.3",
+    "@dfinity/principal": "^0.19.3",
     "@emotion/react": "^11.11.1",
     "@emotion/styled": "^11.11.0",
     "@fontsource/public-sans": "^5.0.8",
-    "@xenova/transformers": "^2.6.1",
+    "@xenova/transformers": "^2.7.0",
+    "crypto": "^1.0.1",
+    "crypto-browserify": "^3.12.0",
     "file-loader": "^6.2.0",
     "framer-motion": "^10.16.4",
-    "fs": "^0.0.1-security",
     "html-webpack-plugin": "^5.5.3",
-    "nexai-assistant": "^0.2.5",
+    "nexai-assistant": "^0.3.10",
+    "node": "^20.7.0",
     "path": "^0.12.7",
-    "process": "^0.11.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.11.0",
     "react-router-dom": "^6.16.0",
+    "stream": "^0.0.2",
+    "tweetnacl": "^1.0.3",
     "url-loader": "^4.1.1"
   },
   "devDependencies": {
@@ -34,7 +40,7 @@
     "copy-webpack-plugin": "^11.0.0",
     "css-loader": "^6.8.1",
     "events": "^3.3.0",
-    "stream-browserify": "^3.0.0",
+    "process": "^0.11.10",
     "style-loader": "^3.3.3",
     "terser-webpack-plugin": "^5.3.9",
     "ts-loader": "^9.4.4",
@@ -43,5 +49,9 @@
     "webpack": "^5.88.2",
     "webpack-cli": "^5.1.4",
     "webpack-dev-server": "^4.15.1"
+  },
+  "engines": {
+    "npm": ">=8.0.0",
+    "node": ">=16.0.0"
   }
 }
