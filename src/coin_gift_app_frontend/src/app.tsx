@@ -1,31 +1,26 @@
 import React, { useEffect } from "react";
 import LandingPage from "../pages/LandingPage";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { Assistant, InputFnc, userInput } from "nexai-assistant"
+import { Assistant, InputFnc, userInput } from "nexai-assistant";
 import { nexai } from "../../declarations/nexai";
 import { useEmbeddQ, useInitTransformers } from "../ml";
 import { EventEmitter } from "events";
 
 const App = () => {
-  const { init } = useInitTransformers()
-  const { call, embeddedQ } = useEmbeddQ()
-
-
-
+  const { init } = useInitTransformers();
+  const { call, embeddedQ } = useEmbeddQ();
 
   useEffect(() => {
     const c_ = async () => {
-      await init()
-    }
+      await init();
+    };
     c_();
     setTimeout(() => {
-      req()
-    }, 5000)
+      req();
+    }, 5000);
+  }, []);
 
-  }, [])
-
-
-  class MyEventEmitter extends EventEmitter { }
+  class MyEventEmitter extends EventEmitter {}
 
   const emitter = new MyEventEmitter();
 
@@ -40,7 +35,7 @@ const App = () => {
     emitter.emit(`event_${value}`, value);
     // Listen for events with the same dynamic names first
     listenForDynamicEvent(`event_${value}`);
-    return
+    return;
   }
 
   // Simulate receiving values at different times
@@ -49,10 +44,9 @@ const App = () => {
     listenForDynamicEvent(`event_${userInput}`);
   }, [userInput]);
 
-
   const req = async () => {
     setTimeout(() => {
-      receiveValueAsEvent(userInput)
+      receiveValueAsEvent(userInput);
     }, 4000);
     // const input: string = receiveValueAsEvent(userInput).toString()
     // await call("du");
@@ -64,7 +58,13 @@ const App = () => {
       <Routes>
         <Route path="/" element={<LandingPage />} />
       </Routes>
-      <Assistant color="red" companyName="Gift Coin" companyId={1} actor={nexai} embeddedQ={embeddedQ} />
+      <Assistant
+        color="red"
+        companyName="Gift Coin"
+        companyId={0}
+        actor={nexai}
+        embeddedQ={embeddedQ}
+      />
     </React.Fragment>
   );
 };
