@@ -2,24 +2,10 @@ import React, { useEffect } from "react";
 import LandingPage from "../pages/LandingPage";
 import { Routes, Route, useNavigate } from "react-router-dom";
 import { Assistant, InputFnc, userInput } from "nexai-assistant";
-import { nexai } from "../../declarations/nexai";
-import { useEmbeddQ, useInitTransformers } from "../ml";
 import { EventEmitter } from "events";
+import { actor } from "../identity";
 
 const App = () => {
-  const { init } = useInitTransformers();
-  const { call, embeddedQ } = useEmbeddQ();
-
-  useEffect(() => {
-    const c_ = async () => {
-      await init();
-    };
-    c_();
-    setTimeout(() => {
-      req();
-    }, 5000);
-  }, []);
-
   class MyEventEmitter extends EventEmitter {}
 
   const emitter = new MyEventEmitter();
@@ -62,8 +48,7 @@ const App = () => {
         color="red"
         companyName="Gift Coin"
         companyId={0}
-        actor={nexai}
-        embeddedQ={embeddedQ}
+        actor={actor}
       />
     </React.Fragment>
   );

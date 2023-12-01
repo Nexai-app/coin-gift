@@ -3,7 +3,9 @@ const webpack = require("webpack");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
 const CopyPlugin = require("copy-webpack-plugin");
+const process = require("process");
 
+global.process = process;
 const network =
   process.env.DFX_NETWORK ||
   (process.env.NODE_ENV === "production" ? "ic" : "local");
@@ -61,8 +63,10 @@ module.exports = {
       assert: require.resolve("assert/"),
       buffer: require.resolve("buffer/"),
       events: require.resolve("events/"),
-      stream: require.resolve("stream-browserify/"),
+      // stream: require.resolve("stream-browserify/"),
       util: require.resolve("util/"),
+      crypto: require.resolve("crypto-browserify"),
+      buffer: require.resolve("buffer/"),
     },
   },
   output: {
