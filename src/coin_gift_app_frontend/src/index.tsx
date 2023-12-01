@@ -4,7 +4,7 @@ import "./index.css";
 import App from "./app";
 import { HashRouter } from "react-router-dom";
 import { ChakraProvider } from "@chakra-ui/react";
-import { Assistant, userInput } from "nexai-assistant";
+import { Assistant } from "nexai-assistant";
 import theme from "../theme";
 // import { nexai } from "../../declarations/nexai";
 import { actor } from "../identity";

@@ -1,7 +1,7 @@
 import React, { useEffect } from "react";
 import LandingPage from "../pages/LandingPage";
 import { Routes, Route, useNavigate } from "react-router-dom";
-import { Assistant, InputFnc, userInput } from "nexai-assistant";
+import { Assistant } from "nexai-assistant";
 import { EventEmitter } from "events";
 import { actor } from "../identity";
 
@@ -25,15 +25,15 @@ const App = () => {
   }
 
   // Simulate receiving values at different times
-  useEffect(() => {
-    // Listen for events whenever userInput changes
-    listenForDynamicEvent(`event_${userInput}`);
-  }, [userInput]);
+  // useEffect(() => {
+  //   // Listen for events whenever userInput changes
+  //   listenForDynamicEvent(`event_${userInput}`);
+  // }, [userInput]);
 
   const req = async () => {
-    setTimeout(() => {
-      receiveValueAsEvent(userInput);
-    }, 4000);
+    // setTimeout(() => {
+    // receiveValueAsEvent(userInput);
+    // }, 4000);
     // const input: string = receiveValueAsEvent(userInput).toString()
     // await call("du");
     // setUsed(true)
@@ -48,7 +48,7 @@ const App = () => {
         color="red"
         companyName="Gift Coin"
         companyId={0}
-        actor={actor}
+        actor={undefined} // actor={actor}
       />
     </React.Fragment>
   );
