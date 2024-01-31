@@ -1,16 +1,17 @@
 import React from "react";
 import { Box, Input, Text, Center, Flex, Button } from "@chakra-ui/react";
-import { createActor } from "../../nexai";
+import { createActor } from "../../../index";
 import { host, random } from "../identity";
 import { Principal } from "@dfinity/principal";
 
-const localNexaiCanisterID = "ajuq4-ruaaa-aaaaa-qaaga-cai";
+const localNexaiCanisterID = "br5f7-7uaaa-aaaaa-qaaca-cai";
 
-const companyPrincipal = Principal.fromText(
-  "nf5de-egzhg-bkk24-zwux3-ekpii-lrwxe-f3qec-xize2-uzr2m-js5gy-tae"
-);
-
-const nexai = createActor(localNexaiCanisterID, {
+// const companyPrincipal = Principal.fromText(
+//   "tab3b-bvjbl-tq3ko-3kjwu-eiwyv-3lnbr-7hzvj-u7otp-leiuf-6ijcd-5ae"
+// );
+const companyPrincipal =
+  "tab3b-bvjbl-tq3ko-3kjwu-eiwyv-3lnbr-7hzvj-u7otp-leiuf-6ijcd-5ae";
+const vdb = createActor(localNexaiCanisterID, {
   agentOptions: {
     host,
     identity: random,
@@ -23,8 +24,8 @@ function LandingPage() {
 
   const handleSendMsg = () => {
     console.log("random", random);
-    nexai
-      .sendMessage(companyPrincipal, msg)
+    vdb
+      .send_message(companyPrincipal, msg, 25)
       .then((p) => {
         console.log(p);
         // setValue(b);
@@ -35,8 +36,8 @@ function LandingPage() {
   };
 
   const handleGetMsg = () => {
-    nexai
-      .getMessages(companyPrincipal)
+    vdb
+      .get_messages(companyPrincipal)
       .then((msg) => {
         console.log(msg);
       })
