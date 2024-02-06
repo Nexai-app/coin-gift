@@ -2,15 +2,15 @@ import React from "react";
 import { Box, Input, Text, Center, Flex, Button } from "@chakra-ui/react";
 import { createActor } from "../../../index";
 import { host, random } from "../identity";
-import { Principal } from "@dfinity/principal";
+// import { Principal } from "@dfinity/principal";
 
-const localNexaiCanisterID = "br5f7-7uaaa-aaaaa-qaaca-cai";
+const localNexaiCanisterID = "a3shf-5eaaa-aaaaa-qaafa-cai";
 
 // const companyPrincipal = Principal.fromText(
 //   "tab3b-bvjbl-tq3ko-3kjwu-eiwyv-3lnbr-7hzvj-u7otp-leiuf-6ijcd-5ae"
 // );
 const companyPrincipal =
-  "tab3b-bvjbl-tq3ko-3kjwu-eiwyv-3lnbr-7hzvj-u7otp-leiuf-6ijcd-5ae";
+  "27am2-4knfe-louzv-3nynx-elwr4-z7akz-4dqmg-vc6ex-yjbwo-yfhex-pqe";
 const vdb = createActor(localNexaiCanisterID, {
   agentOptions: {
     host,
