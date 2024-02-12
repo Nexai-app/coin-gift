@@ -4,14 +4,14 @@ import { createActor } from "../../../index";
 import { host, random } from "../identity";
 // import { Principal } from "@dfinity/principal";
 
-const localNexaiCanisterID = "a3shf-5eaaa-aaaaa-qaafa-cai";
+const localvdbCanisterID = "b77ix-eeaaa-aaaaa-qaada-cai";
 
 // const companyPrincipal = Principal.fromText(
 //   "tab3b-bvjbl-tq3ko-3kjwu-eiwyv-3lnbr-7hzvj-u7otp-leiuf-6ijcd-5ae"
 // );
 const companyPrincipal =
-  "27am2-4knfe-louzv-3nynx-elwr4-z7akz-4dqmg-vc6ex-yjbwo-yfhex-pqe";
-const vdb = createActor(localNexaiCanisterID, {
+  "eq2zv-6jiqy-5gt7a-pxdst-uhlzr-u3knp-u3uqn-wywc4-kmtgs-fddrl-lae";
+const vdb = createActor(localvdbCanisterID, {
   agentOptions: {
     host,
     identity: random,
@@ -25,7 +25,7 @@ function LandingPage() {
   const handleSendMsg = () => {
     console.log("random", random);
     vdb
-      .send_message(companyPrincipal, msg, 25)
+      .send_message(companyPrincipal, msg, BigInt(25))
       .then((p) => {
         console.log(p);
         // setValue(b);

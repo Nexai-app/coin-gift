@@ -12,10 +12,12 @@ const App = () => {
       </Routes>
       <Assistant
         actor={actor}
-        color="red"
-        companyName="DeIOT"
-        companyId={2}
-        // actor={actor}
+        color="purple"
+        companyName="Coin Gift"
+        companyId={1}
+        companyPrincipal={
+          "micnk-5m7ve-c7skm-wcit4-2zze3-5isui-depzn-jnok5-aya2i-wfwg4-eqe"
+        }
       />
     </React.Fragment>
   );

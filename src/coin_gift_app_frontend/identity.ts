@@ -1,5 +1,5 @@
 import { Identity } from "@dfinity/agent";
-import { createActor } from "../declarations/nexai";
+import { createActor } from "../declarations/vdb";
 import { Secp256k1KeyIdentity } from "@dfinity/identity-secp256k1";
 
 type NETWORK_TYPE = "local" | "ic";
@@ -11,7 +11,7 @@ export const host =
 
 // const CANISTER_ID_EXTERNAL = process.env.CANISTER_ID_EXTERNAL;
 const CANISTER_ID_EXTERNAL = "ouyx4-nyaaa-aaaag-qclkq-cai";
-const CANISTER_ID_NEXAI = "aol7b-vqaaa-aaaak-aepsq-cai";
+const CANISTER_ID_NEXAI = "b77ix-eeaaa-aaaaa-qaada-cai";
 
 function getIdentityBySeed(seed: string): Identity {
   let identity = Secp256k1KeyIdentity.generate(); /* fromSeedPhrase(seed); */
